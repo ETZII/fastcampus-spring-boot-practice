@@ -1,14 +1,10 @@
 package com.fastcampus.springbootpractice.model;
 
-import lombok.*;
+public record Student( //변화한 불변 객체 만들기 (record)
+        String name,
+        Integer age,
+        Grade grade) {
 
-@Data
-@Builder
-@Value(staticConstructor = "of")
-public class Student {
-    String name;
-    Integer age;
-    Grade grade;
     public enum Grade {
       A, B, C, D, F
     }
